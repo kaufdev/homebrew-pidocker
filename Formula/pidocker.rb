@@ -12,6 +12,10 @@ class Pidocker < Formula
     bin.install "bin/pidocker"
 
     inreplace bin/"pidocker",
+      'PIDOCKER_IMAGE="${PIDOCKER_IMAGE:-pidocker:local}"',
+      "PIDOCKER_IMAGE=\"${PIDOCKER_IMAGE:-pidocker:v#{version}}\""
+
+    inreplace bin/"pidocker",
       'PIDOCKER_DOCKER_CONTEXT="${PIDOCKER_DOCKER_CONTEXT:-${REPO_ROOT}/docker}"',
       "PIDOCKER_DOCKER_CONTEXT=\"${PIDOCKER_DOCKER_CONTEXT:-#{libexec}/docker}\""
   end
