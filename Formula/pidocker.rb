@@ -1,8 +1,8 @@
 class Pidocker < Formula
   desc "Run Pi inside an isolated Docker container"
   homepage "https://github.com/kaufdev/pidocker"
-  url "https://github.com/kaufdev/pidocker/archive/refs/tags/v0.1.7.tar.gz"
-  sha256 "d9bebf2785c2fb6ce4ad88ea2462ae934d9155e7d12cbb422bb48e4fce16d1b5"
+  url "https://github.com/kaufdev/pidocker/archive/refs/tags/v0.1.8.tar.gz"
+  sha256 "5c12e8c9423a973aaf6bea661e95b67612b16cc1d19cb59130c357b26e2cef51"
   license "MIT"
 
   depends_on "docker"
