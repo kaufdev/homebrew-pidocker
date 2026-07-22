@@ -3,6 +3,7 @@ class Pidocker < Formula
   homepage "https://github.com/kaufdev/pidocker"
   url "https://github.com/kaufdev/pidocker/archive/refs/tags/v0.1.13.tar.gz"
   sha256 "09011693adc42aaf28ee46ad1bec7a18a6aaaca2b2104cb3ef946a960f314e13"
+  revision 1
   license "MIT"
 
   depends_on "docker"
@@ -30,9 +31,6 @@ class Pidocker < Formula
     inreplace bin/"pidocker",
       'PIDOCKER_DOCKERFILE="${PIDOCKER_DOCKERFILE:-${PIDOCKER_DOCKER_CONTEXT}/docker/Dockerfile}"',
       "PIDOCKER_DOCKERFILE=\"${PIDOCKER_DOCKERFILE:-#{libexec}/docker/Dockerfile}\""
-    inreplace bin/"pidocker",
-      "node /usr/local/share/pidocker/pidocker-bootstrap.cjs",
-      "node #{libexec}/docker/pidocker-bootstrap.cjs"
   end
 
   def caveats
